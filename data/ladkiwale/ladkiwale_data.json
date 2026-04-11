@@ -1,0 +1,108 @@
+[
+  {
+    "title": "host",
+    "data": {
+      "names": "Mr. Shyam Sunder Prasad" ,
+      "contact_numbers": ["9934638611", "7519289102"]
+    },
+    "metadata": {
+      "type": "host",
+      "side": "ladkiwale"
+    }
+  },
+  {
+  "title": "Departure for Tilak Ceremony",
+  "data": {
+    "event": "Tilak-departure",
+    "date": "2026-04-16",
+    "start_time": "16:00",
+    "end_time": "18:00",
+    "origin_location": "Bride Residence, Karpi, Arwal, Bihar",
+    "origin_map": "https://maps.app.goo.gl/S8svBw19t6udTUQ49",
+    "destination_location": "Groom Residence, Nala Road, Ara, Bihar",
+    "destination_map": "https://maps.app.goo.gl/3kbWXBKp9nGm7yZGA",
+    "route_map": "https://maps.app.goo.gl/AzvFa6Q4uwrapoRq8",
+    "note": "The bride's side will travel via road for around 2 hours to reach the groom's residence - Ara, Bihar. Upon arrival the Tilak ceremony will start around 19:00 and is expected to last around 2 hours, followed by dinner."
+    },
+    "metadata": {
+      "type": "event",
+      "event": "tilak-departure",
+      "side": "ladkiwale"
+    }
+  },
+  {
+    "title": "Matkor Ceremony",
+    "data": {
+      "event": "Matkor",
+      "date": "2026-04-17",
+      "start_time": "18:00",
+      "end_time": "21:00",
+      "food": "available",
+      "note": "The ceremony will last around 3 hours, followed by food arrangements. Guests are encouraged to arrive early to enjoy the function.",
+      "location": "Bride Residence, Karpi, Arwal, Bihar",
+      "map": "https://maps.app.goo.gl/S8svBw19t6udTUQ49"
+    },
+    "metadata": {
+      "type": "event",
+      "event": "matkor",
+      "side": "ladkiwale"
+    }
+  },
+
+  {
+    "title": "Mehndi and Sangeet",
+    "data": {
+      "event": "Mehndi & Sangeet",
+      "date": "2026-04-18",
+      "start_time": "19:00",
+      "end_time": "22:00",
+      "food": "available",
+      "note": "The ceremony will last around 3 hours, followed by food, music and dance arrangements. Guests are encouraged to arrive early to enjoy the celebration.",
+      "location": "Bride Residence, Karpi, Arwal, Bihar",
+      "map": "https://maps.app.goo.gl/S8svBw19t6udTUQ49"
+    },
+    "metadata": {
+      "type": "event",
+      "event": "mehndi_sangeet",
+      "side": "ladkiwale"
+    }
+  },
+
+  {
+    "title": "Haldi Kalash",
+    "data": {
+      "event": "Haldi Kalash",
+      "date": "2026-04-19",
+      "start_time": "19:00",
+      "end_time": "22:00",
+      "note": "The ceremony will last around 3 hours, followed by food arrangements. Guests are encouraged to arrive early to enjoy the function.",
+      "food": "available",
+      "location": "Bride Residence, Karpi, Arwal, Bihar",
+      "map": "https://maps.app.goo.gl/S8svBw19t6udTUQ49"
+    },
+    "metadata": {
+      "type": "event",
+      "event": "haldi",
+      "side": "ladkiwale"
+    }
+  },
+
+  {
+    "title": "Reception",
+    "data": {
+      "event": "Reception",
+      "date": "2026-04-20",
+      "start_time": "19:00",
+      "end_time": "23:00",
+      "food": "available",
+      "note": "The reception will continue late into the night. Guests are encouraged to arrive early to witness special moments like the Barat arrival, Samdhi Milan, Parchhawan, and JayaMala.",
+      "location": "Nand Marriage Hall, Mahuabag, Arwal, Bihar",
+      "map": "https://maps.app.goo.gl/zrWcht9ah4dh4NJYA"
+    },
+    "metadata": {
+      "type": "event",
+      "event": "reception",
+      "side": "ladkiwale"
+    }
+  }
+]

@@ -1,0 +1,104 @@
+[
+  {
+    "title": "host",
+    "data": {
+      "names": "Mr. Banarsi Sah",
+      "contact_numbers": "8709378788"
+    },
+    "metadata": {
+      "type": "host",
+      "side": "ladkewale"
+    }
+  },
+  {
+    "title": "Tilak Ceremony",
+    "data": {
+      "event": "Tilak",
+      "date": "2026-04-09",
+      "start_time": "19:00",
+      "end_time": "22:00",
+      "food": "available",
+      "note": "The ceremony will last around 3 hours, followed by food arrangements. Guests are encouraged to arrive early to enjoy function.",
+      "location": "Jai Hind Colony, Nala More, Ara, Bhojpur, Bihar",
+      "map": "https://maps.app.goo.gl/3kbWXBKp9nGm7yZGA"
+    },
+    "metadata": {
+      "type": "event",
+      "event": "dhan_batti",
+      "side": "ladkewale"
+    }
+  },
+  {
+    "title": "Haldi Kalash Ceremony",
+    "data": {
+      "event": "Haldi Kalash",
+      "date": "2026-04-10",
+      "start_time": "18:00",
+      "end_time": "21:00",
+      "food": "available",
+      "note": "The ceremony will last around 3 hours, followed by food arrangements. Guests are encouraged to arrive early to enjoy the function.",
+      "location": "Jai Hind Colony, Nala More, Ara, Bhojpur, Bihar",
+      "map": "https://maps.app.goo.gl/3kbWXBKp9nGm7yZGA"
+    },
+    "metadata": {
+      "type": "event",
+      "event": "haldi",
+      "side": "ladkewale"
+    }
+  },
+  {
+    "title": "Baraat-Departure",
+    "data": {
+      "event": "Baraat-Departure",
+      "date": "2026-04-20",
+      "start_time": "16:00",
+      "end_time": "18:00",
+      "origin_location":"Jai Hind Colony, Nala More, Ara, Bhojpur, Bihar",
+      "origin_map": "https://maps.app.goo.gl/3kbWXBKp9nGm7yZGA",
+      "destination_location": "Karpi, Arwal, Bihar, India",
+      "destination_map": "https://maps.app.goo.gl/S8svBw19t6udTUQ49",
+      "route_map": "https://maps.app.goo.gl/GMKNdJBugRuTaW4z8",
+      "note": "The groom's side will travel via road for around 2 hours to reach Karpi, Arwal. Upon arrival, the procession will begins around 19:00 featuring lights, music, dance, and firecrackers."
+    },
+    "metadata": {
+      "type": "event",
+      "event": "baraat-departure",
+      "side": "ladkewale"
+    }
+  },
+  {
+  "title": "Barat Procession",
+  "data": {
+    "event": "barat_procession",
+    "date": "2026-04-20",
+    "start_time": "19:00",
+    "end_time": "20:00",
+    "note": "Expect the Barat procession to arrive around 20:00 at Nand Marriage Hall, filled with music, lights, dancing, firecrackers, and high-energy celebrations marking the groom’s grand entry.",
+    "location": "Nand Marriage Hall, Mahuabag, Arwal, Bihar",
+    "map": "https://maps.app.goo.gl/zrWcht9ah4dh4NJYA"
+    },
+    "metadata": {
+      "type": "event",
+      "event": "barat_procession",
+      "side": "ladkewale"
+    }
+  },
+  {
+    "title": "Reception",
+    "data": {
+      "event": "Reception",
+      "date": "2026-04-22",
+      "start_time": "19:00",
+      "end_time": "23:00",
+      "food": "available",
+      "note": "The reception will continue late into the evening. Guests are welcome to join, meet the couple, and enjoy the celebrations.",
+      "location": "Durga Utsav Hall, Ara, Bihar",
+      "map": "https://maps.app.goo.gl/TTmbuRia2TC7w4gM6"
+    },
+    "metadata": {
+      "type": "event",
+      "event": "reception",
+      "side": "ladkewale"
+    }
+  }
+]

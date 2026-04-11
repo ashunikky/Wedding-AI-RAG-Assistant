@@ -1,0 +1,108 @@
+[
+    {
+    "title": "Groom Details",
+    "data": {
+      "name": "Mr. Suraj Kumar Gupta",
+      "father": "Late Rameshwar Sah",
+      "mother": "Late Sheela Devi",
+      "elder-brother": "Mr. Santosh Gupta",
+      "address": "Jai Hind Colony, Nala More, Ara, Bhojpur, Bihar",
+      "occupation":"Assistant Loco pilot in Indian Railway, Posted in Barauni, Bihar",
+      "qualification": "B.Tech in Mechanical Engineering from BPUT university",
+      "hobbies":["learning, cooking, music listening"],
+      "qualities":["problem solver, deep thinker, good motivater, Hard working, Helpful-nature, Kind-hearted, Good Cook, Mr. Perfect"],
+      "map": "https://maps.app.goo.gl/3kbWXBKp9nGm7yZGA"
+    },
+    "metadata": {
+      "type": "Groom-info",
+      "side": "common"
+    }
+  },
+  {
+    "title": "Bride Details",
+    "data": {
+      "name": "Miss. Rani Kumari",
+      "father": "Mr. Shyam Sunder Prasad",
+      "mother": "Mrs. Koushalya Devi",
+      "qualification": "Graduation in Math honors",
+      "occupation":"Surgent in Bihar police, Posted in Aurangabad, Bihar",
+      "address": "Karpi, Arwal, Bihar",
+      "map": "https://maps.app.goo.gl/S8svBw19t6udTUQ49",
+      "qualities": ["Food lover", "Mature", "Down to earth", "Family-oriented", "Cheerful"]
+    },
+    "metadata": {
+      "type": "Bride-info",
+      "side": "common"
+    }
+  },
+  {
+    "title": "Barat- arrival, Samdhi-milan and Dulha-parchhawan ceremony",
+    "data": {
+      "event": ["Barat- arrival", "Samdhi-milan", "Dulha-parchhawan ceremony"],
+      "date": "2026-04-20",
+      "start_time": "20:00",
+      "end_time" : "20:45",
+      "location": "Nand Marriage Hall, Mahuabag, Arwal, Bihar",
+      "map": "https://maps.app.goo.gl/zrWcht9ah4dh4NJYA"
+    },
+    "metadata": {
+      "type": "event",
+      "event": "Barat- arrival, Samdhi-Milan and Dulha-parchhawan",
+      "side": "common"
+    }
+  },
+  {
+    "title": "Jayamala Ceremony",
+    "data": {
+      "event": "Jayamala",
+      "date": "2026-04-20",
+      "start_time": "21:00",
+      "end_time": "22:00",
+      "location": "Nand Marriage Hall, Mahuabag, Arwal, Bihar",
+      "map": "https://maps.app.goo.gl/zrWcht9ah4dh4NJYA"
+    },
+    "metadata": {
+      "type": "event",
+      "event": "jayamala",
+      "side": "common"
+    }
+  },
+  {
+    "title": "Wedding Ceremony",
+    "data": {
+      "event": ["Kanyadaan", "Phera", "Sindoor Daan", "Vidaai"],
+      "date": "2026-04-20",
+      "start_time": "23:30",
+      "end_time": "06:00",
+      "overnight": true,
+      "note": "Continues overnight till early morning",
+      "Dinner": "available",
+      "location": "Nand Marriage Hall, Mahuabag, Arwal, Bihar",
+      "map": "https://maps.app.goo.gl/zrWcht9ah4dh4NJYA"
+    },
+    "metadata": {
+      "type": "event",
+      "event": "wedding",
+      "side": "common"
+    }
+  },
+  {
+  "title": "About Ashutosh Pandit",
+  "data": {
+    "name": "Mr. Ashutosh Pandit",
+    "role": "AI Assistant Developer",
+    "relationship_with_groom": "Friend and former roommate of Suraj Kumar Gupta during college days",
+    "address": "Jamshedpur, Jharkhand, India",
+    "occupation": "Gen-AI Engineer / AI Quality Assurance",
+    "qualification": "B.Tech from BPUT University",
+    "profile": "https://www.linkedin.com/in/ashutosh-pandit-64a375102/",
+    "contact_numbers" : "9122972521",
+    "note": "Ashutosh also develops websites, chatbots, and AI-powered assistants for events and businesses. If you are interested in creating a similar solution, you can reach out directly."
+  },
+  "metadata": {
+    "type": "person",
+    "category": "developer",
+    "side": "common"
+  }
+}
+]
