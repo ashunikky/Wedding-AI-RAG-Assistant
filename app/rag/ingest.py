@@ -99,7 +99,7 @@ def load_json_files():
                         title = item.get("title", "")
                         content = item.get("data", {})
 
-                        # ⚠️ IMPORTANT: avoid mutating original metadata
+                        # ⚠️ Avoid mutating original metadata
                         metadata = dict(item.get("metadata", {}))
 
                         # ✅ Always include side
@@ -108,34 +108,60 @@ def load_json_files():
                         # ✅ Convert structured → text for embeddings
                         text = convert_to_text(title, content)
 
-                        # ------------------ EVENT HANDLING ------------------
+                        # ================== EVENT HANDLING ==================
                         if metadata.get("type") == "event":
+
+                            # 🔥 Smart location handling
+                            location = content.get("location")
+
+                            if not location:
+                                origin = content.get("origin_location")
+                                destination = content.get("destination_location")
+
+                                if origin and destination:
+                                    location = f"{origin} to {destination}"
+                                elif origin:
+                                    location = origin
+                                elif destination:
+                                    location = destination
+
+                            # 🔥 Smart map handling
+                            map_link = (
+                                content.get("map")
+                                or content.get("origin_map")
+                                or content.get("destination_map")
+                            )
+
                             clean_data = {
                                 "title": title,
                                 "event": content.get("event"),
                                 "date": content.get("date"),
                                 "start_time": content.get("start_time"),
                                 "end_time": content.get("end_time"),
-                                "location": content.get("location"),
-                                "map": content.get("map"),
+                                "location": location,
+                                "map": map_link,
                                 "note": content.get("note"),
                                 "food": content.get("food"),
                             }
 
-                            # ✅ remove None values
+                            # ✅ Remove None values
                             clean_data = {k: v for k, v in clean_data.items() if v is not None}
 
                             metadata.update(clean_data)
 
-                            # ✅ Add timestamps (for status engine)
+                            # 🔥 Add timestamps (CRITICAL for event sorting)
                             start_ts, end_ts = parse_event_times(content)
 
                             if start_ts and end_ts:
                                 metadata["start_timestamp"] = start_ts
                                 metadata["end_timestamp"] = end_ts
 
-                        # ------------------ HOST / COORDINATOR ------------------
-                        elif metadata.get("type") == "host":
+                                # 🔥 BONUS: store start_ts separately for sorting
+                                metadata["event_start_ts"] = start_ts
+
+                        # ================== HOST / COORDINATOR ==================
+                        elif metadata.get("type") in ["host", "coordinator"]:
+
                             names = content.get("names")
                             numbers = content.get("contact_numbers")
 
@@ -144,18 +170,23 @@ def load_json_files():
                                 "names": names,
                             })
 
+                            # ✅ Ensure list format (IMPORTANT for Pinecone)
                             if isinstance(numbers, list) and len(numbers) > 0:
                                 metadata["contact_numbers"] = numbers
+                            elif isinstance(numbers, str):
+                                metadata["contact_numbers"] = [numbers]
 
-                        # ------------------ FINAL STRUCTURE ------------------
+                        # ================== FINAL CLEANUP ==================
 
-                        # ✅ CRITICAL: store text inside metadata for retrieval
+                        # ✅ Store text for better retrieval
                         metadata["text"] = text
+
+                        # ✅ Clean metadata (remove None, empty, invalid types)
                         metadata = clean_metadata(metadata)
 
-                        # ✅ Create Pinecone-compatible vector
+                        # ✅ Create vector (stable ID to avoid duplicates)
                         documents.append({
-                            "id": str(hash(text)),  # avoids duplicates
+                            "id": f"{side}-{hash(text)}",
                             "values": embedding.embed_query(text),
                             "metadata": metadata
                         })

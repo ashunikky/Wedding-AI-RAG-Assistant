@@ -14,7 +14,7 @@
     "title": "Tilak Ceremony",
     "data": {
       "event": "Tilak",
-      "date": "2026-04-09",
+      "date": "2026-04-16",
       "start_time": "19:00",
       "end_time": "22:00",
       "food": "available",
@@ -32,9 +32,9 @@
     "title": "Haldi Kalash Ceremony",
     "data": {
       "event": "Haldi Kalash",
-      "date": "2026-04-10",
-      "start_time": "18:00",
-      "end_time": "21:00",
+      "date": "2026-04-18",
+      "start_time": "19:00",
+      "end_time": "22:00",
       "food": "available",
       "note": "The ceremony will last around 3 hours, followed by food arrangements. Guests are encouraged to arrive early to enjoy the function.",
       "location": "Jai Hind Colony, Nala More, Ara, Bhojpur, Bihar",
@@ -47,7 +47,7 @@
     }
   },
   {
-    "title": "Baraat-Departure",
+    "title": "Barat-Departure",
     "data": {
       "event": "Baraat-Departure",
       "date": "2026-04-20",
@@ -67,9 +67,9 @@
     }
   },
   {
-  "title": "Barat Procession",
+  "title": "Barat-Procession",
   "data": {
-    "event": "barat_procession",
+    "event": "barat-procession",
     "date": "2026-04-20",
     "start_time": "19:00",
     "end_time": "20:00",
@@ -79,7 +79,7 @@
     },
     "metadata": {
       "type": "event",
-      "event": "barat_procession",
+      "event": "barat-procession",
       "side": "ladkewale"
     }
   },

@@ -80,8 +80,10 @@ def build_event_status_block(role):
         "side": {"$in": [role, "common"]}
     })
 
-    blocks = []
+    events = []
+    now = datetime.now(IST)
 
+    # ✅ Build structured list
     for meta in results:
         date = meta.get("date")
         start_time = meta.get("start_time")
@@ -95,20 +97,55 @@ def build_event_status_block(role):
 
         status = calculate_event_status(start_dt, end_dt)
 
+        events.append({
+            "meta": meta,
+            "start_dt": start_dt,
+            "end_dt": end_dt,
+            "status": status
+        })
+
+    # ✅ SORT events by start time
+    events.sort(key=lambda x: x["start_dt"])
+
+    current_event_index = None
+    next_event_index = None
+
+    # 1️⃣ Find CURRENT (live) event
+    for i, e in enumerate(events):
+        if e["status"] in ["live", "just_started", "ending"]:
+            current_event_index = i
+            break
+
+    # 2️⃣ Find NEXT (strictly future)
+    for i, e in enumerate(events):
+        if e["status"] == "upcoming":
+            next_event_index = i
+            break
+
+    blocks = []
+
+    # ✅ BUILD BLOCKS WITH NEXT FLAG
+    for i, e in enumerate(events):
+        meta = e["meta"]
+
+        is_next = "YES" if i == next_event_index else "NO"
+        is_current = "YES" if i == current_event_index else "NO"
+
         block = f"""
 Title: {meta.get("title", "")}
 Event: {meta.get("event", "")}
-Date: {date}
-Start Time: {start_time}
-End Time: {end_time}
+Date: {meta.get("date", "")}
+Start Time: {meta.get("start_time", "")}
+End Time: {meta.get("end_time", "")}
 Location: {meta.get("location", "")}
 Map: {meta.get("map", "")}
-STATUS: {status}
+STATUS: {e["status"]}
+CURRENT_EVENT: {is_current}
+NEXT_EVENT: {is_next}
 """
         blocks.append(block)
 
     return "\n".join(blocks)
-
 
 # ------------------ HOST BLOCK ------------------
 
