@@ -1,6 +1,6 @@
 [
     {
-    "title": "Groom Details",
+    "title": "groom_details",
     "data": {
       "name": "Mr. Suraj Kumar Gupta",
       "father": "Late Rameshwar Sah",
@@ -11,15 +11,16 @@
       "qualification": "B.Tech in Mechanical Engineering from BPUT university",
       "hobbies":["learning, cooking, music listening"],
       "qualities":["problem solver, deep thinker, good motivater, Hard working, Helpful-nature, Kind-hearted, Good Cook, Mr. Perfect"],
-      "map": "https://maps.app.goo.gl/3kbWXBKp9nGm7yZGA"
+      "map": "https://maps.app.goo.gl/3kbWXBKp9nGm7yZGA",
+      "image_id": "groom_001"
     },
     "metadata": {
-      "type": "Groom-info",
+      "type": "person",
       "side": "common"
     }
   },
   {
-    "title": "Bride Details",
+    "title": "bride_details",
     "data": {
       "name": "Miss. Rani Kumari",
       "father": "Mr. Shyam Sunder Prasad",
@@ -28,37 +29,40 @@
       "occupation":"Surgent in Bihar police, Posted in Aurangabad, Bihar",
       "address": "Karpi, Arwal, Bihar",
       "map": "https://maps.app.goo.gl/S8svBw19t6udTUQ49",
+      "image_id": "bride_001",
       "qualities": ["Food lover", "Mature", "Down to earth", "Family-oriented", "Cheerful"]
     },
     "metadata": {
-      "type": "Bride-info",
+      "type": "person",
       "side": "common"
     }
   },
   {
-    "title": "Barat- arrival, Samdhi-milan and Dulha-parchhawan ceremony",
+    "title": "barat_arrival",
     "data": {
-      "event": ["Barat- arrival", "Samdhi-milan", "Dulha-parchhawan ceremony"],
+      "event": ["barat_arrival", "samdhi_milan", "dulha_parchhawan"],
       "date": "2026-04-20",
       "start_time": "20:00",
       "end_time" : "20:45",
       "location": "Nand Marriage Hall, Mahuabag, Arwal, Bihar",
+      "image_id": "common_barat_001",
       "map": "https://maps.app.goo.gl/zrWcht9ah4dh4NJYA"
     },
     "metadata": {
       "type": "event",
-      "event": "Barat- arrival, Samdhi-Milan and Dulha-parchhawan",
+      "event": "barat_arrival",
       "side": "common"
     }
   },
   {
-    "title": "Jayamala Ceremony",
+    "title": "jayamala",
     "data": {
-      "event": "Jayamala",
+      "event": "jayamala",
       "date": "2026-04-20",
       "start_time": "21:00",
       "end_time": "22:00",
       "location": "Nand Marriage Hall, Mahuabag, Arwal, Bihar",
+      "image_id": "jaymala_001",
       "map": "https://maps.app.goo.gl/zrWcht9ah4dh4NJYA"
     },
     "metadata": {
@@ -68,9 +72,9 @@
     }
   },
   {
-    "title": "Wedding Ceremony",
+    "title": "wedding",
     "data": {
-      "event": ["Kanyadaan", "Phera", "Sindoor Daan", "Vidaai"],
+      "event": ["kanyadaan", "phera", "sindoor_daan", "vidaai"],
       "date": "2026-04-20",
       "start_time": "23:30",
       "end_time": "06:00",
@@ -78,7 +82,8 @@
       "note": "Continues overnight till early morning",
       "Dinner": "available",
       "location": "Nand Marriage Hall, Mahuabag, Arwal, Bihar",
-      "map": "https://maps.app.goo.gl/zrWcht9ah4dh4NJYA"
+      "map": "https://maps.app.goo.gl/zrWcht9ah4dh4NJYA",
+      "image_id": "wedding_001"
     },
     "metadata": {
       "type": "event",
@@ -87,7 +92,7 @@
     }
   },
   {
-  "title": "About Ashutosh Pandit",
+  "title": "developer",
   "data": {
     "name": "Mr. Ashutosh Pandit",
     "role": "AI Assistant Developer",
@@ -97,6 +102,7 @@
     "qualification": "B.Tech from BPUT University",
     "profile": "https://www.linkedin.com/in/ashutosh-pandit-64a375102/",
     "contact_numbers" : "9122972521",
+    "image_id": "developer_001",
     "note": "Ashutosh also develops websites, chatbots, and AI-powered assistants for events and businesses. If you are interested in creating a similar solution, you can reach out directly."
   },
   "metadata": {

@@ -53,18 +53,19 @@ TODAY USAGE RULE (VERY STRICT)
 
 - Use "today" / "aaj" ONLY IF:
   → Event date EXACTLY matches current date
+    example: today 7 PM
 
 - If NOT today:
   → ALWAYS mention full date
   → NEVER say "today"
 
-Examples:
+    Examples:
 
-Correct:
-"16 April ko shaam 7 baje"
+    Correct:
+    "16 April ko shaam 7 baje"
 
-Wrong:
-"today 7 PM" ❌ (if not same date)
+    Wrong:
+    "today 7 PM" ❌ (if not same date)
 
 ----------------------------------------
 

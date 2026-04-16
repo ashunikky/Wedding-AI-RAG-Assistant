@@ -25,18 +25,18 @@ index = pc.Index("wedding-ai")
 
 # ------------------ HELPERS ------------------
 
+# In convert_to_text, the title line should use the person's name if available
 def convert_to_text(title, data):
-    """
-    Convert structured JSON into readable text for embeddings
-    """
     lines = [f"Title: {title}"]
-
+    name = data.get("name")
+    if name:
+        lines.append(f"Name: {name}")   # ← ensures name is prominent for retrieval
     for key, value in data.items():
+        if key == "name":
+            continue  # already added
         if isinstance(value, list):
-            value = ", ".join(value)
-
+            value = ", ".join(str(v) for v in value)
         lines.append(f"{key.replace('_', ' ').title()}: {value}")
-
     return "\n".join(lines)
 
 
@@ -65,12 +65,18 @@ def parse_event_times(content):
 
 def clean_metadata(metadata):
     cleaned = {}
+    # Fields that must always be strings, never lists
+    FORCE_STRING_FIELDS = {"event", "title", "type", "side", "date", 
+                           "start_time", "end_time", "location", "map", 
+                           "note", "food", "name", "status"}
 
     for k, v in metadata.items():
         if v is None:
             continue
+        elif k in FORCE_STRING_FIELDS:
+            # Force these to always be plain strings
+            cleaned[k] = ", ".join(str(i) for i in v) if isinstance(v, list) else str(v)
         elif isinstance(v, list):
-            # keep only string lists
             cleaned[k] = [str(i) for i in v if i is not None]
         elif isinstance(v, (str, int, float, bool)):
             cleaned[k] = v
@@ -142,6 +148,7 @@ def load_json_files():
                                 "map": map_link,
                                 "note": content.get("note"),
                                 "food": content.get("food"),
+                                "image_id": content.get("image_id"),
                             }
 
                             # ✅ Remove None values
@@ -160,17 +167,19 @@ def load_json_files():
                                 metadata["event_start_ts"] = start_ts
 
                         # ================== HOST / COORDINATOR ==================
-                        elif metadata.get("type") in ["host", "coordinator"]:
+                        elif metadata.get("type") == "person":
 
-                            names = content.get("names")
+                            name = content.get("name")
                             numbers = content.get("contact_numbers")
+                            image_id = content.get("image_id")  # 🔥 IMPORTANT
 
                             metadata.update({
                                 "title": title,
-                                "names": names,
+                                "name": name,
+                                "image_id": image_id,  # 🔥 ADD THIS
                             })
 
-                            # ✅ Ensure list format (IMPORTANT for Pinecone)
+                            # ✅ Ensure list format
                             if isinstance(numbers, list) and len(numbers) > 0:
                                 metadata["contact_numbers"] = numbers
                             elif isinstance(numbers, str):

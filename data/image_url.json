@@ -1,0 +1,91 @@
+{
+  "ladkewale_tilak_001": {
+    "url":"https://res.cloudinary.com/doxjnblhi/image/upload/Tilak_lrxsdj.png",
+    "type": "event",
+    "side": "ladkewale"
+  },
+
+  "ladkewale_haldi_001": {
+    "url": "https://res.cloudinary.com/doxjnblhi/image/upload/Groom_haldi_orv7cx.png",
+    "type": "event",
+    "side": "ladkewale"
+  },
+
+  "ladkewale_barat_departure_001": {
+    "url": "https://res.cloudinary.com/doxjnblhi/image/upload/Barat_departure_dvt0vx.png",
+    "type": "event",
+    "side": "ladkewale"
+  },
+
+  "common_barat_001": {
+    "url": "https://res.cloudinary.com/doxjnblhi/image/upload/Barat_procession_wdccyb.png",
+    "type": "event",
+    "side": "common"
+  },
+
+  "ladkewale_reception_001": {
+    "url": "https://res.cloudinary.com/doxjnblhi/image/upload/Wedding_reception_lmucdu.png",
+    "type": "event",
+    "side": "ladkewale"
+  },
+
+  "ladkiwale_tilak_001": {
+    "url": "https://res.cloudinary.com/doxjnblhi/image/upload/Tilak_departure_w9djwb.png",
+    "type": "event",
+    "side": "ladkiwale"
+  },
+
+  "ladkiwale_matkor_001": {
+    "url": "https://res.cloudinary.com/doxjnblhi/image/upload/Bride_matkor_rdihby.png",
+    "type": "event",
+    "side": "ladkiwale"
+  },
+
+  "ladkiwale_mehndi_001": {
+    "url": "https://res.cloudinary.com/doxjnblhi/image/upload/bride_mehndi_pdehu0.png",
+    "type": "event",
+    "side": "ladkiwale"
+  },
+  
+  "ladkiwale_haldi_001": {
+    "url": "https://res.cloudinary.com/doxjnblhi/image/upload/Bride_haldi_ew3bul.png",
+    "type": "event",
+    "side": "ladkiwale"
+  },
+
+  "ladkiwale_reception_001": {
+    "url": "https://res.cloudinary.com/doxjnblhi/image/upload/Barat_procession_wdccyb.png",
+    "type": "event",
+    "side": "ladkiwale"
+  },
+
+  "groom_001": {
+    "url": "https://res.cloudinary.com/doxjnblhi/image/upload/groom_ospzgh.png",
+    "type": "person",
+    "side": "common"
+  },
+
+  "bride_001": {
+    "url": "https://res.cloudinary.com/doxjnblhi/image/upload/bride_varw0o.png",
+    "type": "person",
+    "side": "common"
+  },
+
+  "jaymala_001": {
+    "url": "https://res.cloudinary.com/doxjnblhi/image/upload/jaymala_scldbi.png",
+    "type": "event",
+    "side": "common"
+  },
+
+  "wedding_001": {
+    "url": "https://res.cloudinary.com/doxjnblhi/image/upload/wedding_otgjf3.png",
+    "type": "event",
+    "side": "common"
+  },
+
+  "developer_001": {
+    "url": "https://res.cloudinary.com/doxjnblhi/image/upload/Ashutosh_tb6sa4.png",
+    "type": "person",
+    "side": "common"
+  }
+}
