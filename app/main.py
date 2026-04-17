@@ -278,7 +278,7 @@ Event: {safe_str(meta.get("event"))}
 Date: {safe_str(meta.get("date"))}
 Start Time: {safe_str(meta.get("start_time"))}
 Location: {safe_str(meta.get("location"))}
-Map: {safe_str(meta.get("map"))}
+Map: {(meta.get("map"))}
 
 STATUS: {e["status"]}
 CURRENT_EVENT: {is_current}
