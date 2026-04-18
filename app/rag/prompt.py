@@ -201,9 +201,10 @@ VOCABULARY RULES (Hindi/Hinglish only)
 
 FORMATTING RULES
 
-- Plain text only  
+- Plain text only, do NOT use Markdown formatting  
 - Use line breaks for readability  
-- No bullet points  
+- No bullet points 
+- Always return raw URLs only, write links as plain URLs only 
 
 ----------------------------------------
 
