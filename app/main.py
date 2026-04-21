@@ -213,7 +213,6 @@ def build_event_status_block(role):
         if not date or not start_time or not end_time:
             continue
 
-        # ✅ FIX: guard against list values in date/time fields
         date       = safe_str(date)
         start_time = safe_str(start_time)
         end_time   = safe_str(end_time)
@@ -229,36 +228,41 @@ def build_event_status_block(role):
         events.append({
             "meta": meta,
             "start_dt": start_dt,
+            "end_dt": end_dt,
             "status": status_info["status"],
             "is_today": status_info["is_today"],
             "time_hint": status_info["time_hint"],
             "minutes_to_start": status_info["minutes_to_start"]
         })
 
+    # ✅ Always sort
     events.sort(key=lambda x: x["start_dt"])
 
     current_event_index = None
     next_event_index = None
 
-    # PRIORITY 1: LIVE EVENT
+    # =========================
+    # ✅ CURRENT EVENT (STRICT)
+    # =========================
     for i, e in enumerate(events):
-        if e["status"] in ["live", "just_started", "ending"]:
+        if e["start_dt"] <= now <= e["end_dt"]:
             current_event_index = i
             break
 
-    # PRIORITY 2: TODAY UPCOMING
-    if current_event_index is None:
-        for i, e in enumerate(events):
-            if e["status"] == "upcoming" and e["is_today"]:
-                next_event_index = i
-                break
+    # =========================
+    # ✅ NEXT EVENT (STRICT FIX)
+    # =========================
+    future_events = [
+        (i, e) for i, e in enumerate(events)
+        if e["start_dt"] > now
+    ]
 
-    # PRIORITY 3: FUTURE
-    if next_event_index is None:
-        for i, e in enumerate(events):
-            if e["status"] == "upcoming":
-                next_event_index = i
-                break
+    if future_events:
+        next_event_index = future_events[0][0]  # already sorted
+
+    # =========================
+    # ❌ DO NOT FALLBACK TO STATUS
+    # =========================
 
     blocks = []
     next_event_meta = None
