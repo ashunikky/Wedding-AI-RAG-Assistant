@@ -4,6 +4,8 @@ An AI-powered Wedding Assistant built to help guests get real-time event informa
 
 This project combines **React + FastAPI + OpenAI + Pinecone** to create a multilingual, role-aware, time-aware wedding assistant that answers guest queries about functions, timings, locations, contacts, and event guidance.
 
+Live URL (FastAPI) : https://wedding-ai-rag-assistant-backend.onrender.com/
+
 ---
 
 ## 🚀 Features
